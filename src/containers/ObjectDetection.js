@@ -1,6 +1,7 @@
 // Import dependencies
 import React, { useRef, useState, useEffect } from "react";
 import * as cocossd from "@tensorflow-models/coco-ssd";
+import * as tf from '@tensorflow/tfjs'
 import Webcam from "react-webcam";
 import "./ObjectDetection.scss"
 import { drawRect } from "../utilities/detection";
@@ -40,7 +41,7 @@ const ObjectDetection = () => {
             const obj = await net.detect(video);
 
             const ctx = canvasRef.current.getContext("2d");
-            drawRect(obj, ctx, speak, speaking, cancel);
+            drawRect(obj, ctx);
         }
     };
 

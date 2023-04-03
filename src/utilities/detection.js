@@ -24,7 +24,7 @@ export const drawRect = (detections, ctx) =>{
     ctx.font = '18px Arial';
 
     ctx.beginPath();   
-    ctx.fillStyle = color
+    ctx.fillStyle = color;
     ctx.fillText(text, x, y);
     ctx.rect(x, y, width, height); 
     ctx.stroke();
